@@ -1,0 +1,61 @@
+/* src/css/Notifications.css */
+
+.notifications-page {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notifications-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background-color: #f0f4f8; /* màu nền thông báo */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+  background-color: #e0e7ef;
+}
+
+.notification-message {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+.notification-message.unread {
+  font-weight: bold;
+  color: #007bff; /* màu nổi bật cho thông báo mới */
+}
+
+.notification-delete {
+  background-color: #ff4d4f;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.notification-delete:hover {
+  background-color: #d9363e;
+}

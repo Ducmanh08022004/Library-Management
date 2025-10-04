@@ -1,0 +1,92 @@
+/* ===== Container & Page ===== */
+.login-page {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.login-page h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #fff;
+  padding: 24px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== Form Inputs ===== */
+.login-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #007bff;
+}
+
+/* ===== Buttons ===== */
+.login-form button {
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+/* ===== Footer ===== */
+.auth-footer {
+  font-size: 14px;
+  color: #666;
+  margin-top: 16px;
+}
+
+.auth-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.auth-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .login-page {
+    margin: 40px 10px;
+  }
+
+  .login-form input {
+    font-size: 14px;
+  }
+
+  .login-form button {
+    font-size: 14px;
+  }
+}

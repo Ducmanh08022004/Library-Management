@@ -1,0 +1,77 @@
+.records-page {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.records-page h2 {
+  text-align: center;
+  color: #007bff;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.records-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.record-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.record-message {
+  font-size: 16px;
+  color: #333;
+}
+
+.record-actions button {
+  margin-left: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.record-return {
+  background-color: #28a745;
+  color: white;
+}
+
+.record-return:hover {
+  background-color: #218838;
+}
+
+.record-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.record-delete:hover {
+  background-color: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .record-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .record-actions button {
+    width: 100%;
+  }
+}
