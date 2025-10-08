@@ -23,7 +23,7 @@ import java.util.Arrays;
 @EnableMethodSecurity(prePostEnabled = true)
 public class SecurityConfig {
 
-    private String[] PUBLIC_AUTHEN = {"/auth/token", "/auth/introspect", "/user"};
+    private String[] PUBLIC_AUTHEN = {"/auth/token", "/auth/introspect", "/user","/auth/logout"};
 
     @Value("${jwt.signer_key}")
     private String Secret_key;
