@@ -9,13 +9,13 @@ import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
-@Table(name = "invalidToken")
+@Table(name = "invalid_token")
 public class InvalidToken {
     @Id
     @Column(name = "id")
     private String id;
 
-    @Column(name = "expiryTime")
+    @Column(name = "expiry_time")
     private Date expiryTime;
 
     public InvalidToken() {

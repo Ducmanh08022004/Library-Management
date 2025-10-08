@@ -65,9 +65,16 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public IntrospectResponse introspectRequest(IntrospectRequest introspectRequest) throws JOSEException, ParseException {
         var token = introspectRequest.getToken();
-        verifyToken(introspectRequest.getToken());
+        boolean isValid = true;
+
+        try {
+            verifyToken(token);
+        }
+        catch (AppException e)
+        { isValid = false;}
+
         IntrospectResponse introspectRespone = new IntrospectResponse();
-        introspectRespone.setValid(true);
+        introspectRespone.setValid(isValid);
         return introspectRespone;
     }
 
@@ -95,6 +102,10 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         {
             throw new AppException(ErrorCode.UNAUTHENTICATED);
         }
+
+        if (invalidTokenRepository.existsById(signedJWT.getJWTClaimsSet().getJWTID()))
+            throw  new AppException(ErrorCode.UNAUTHENTICATED);
+
         return signedJWT;
     }
 
